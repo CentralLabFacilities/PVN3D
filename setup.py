@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import glob
-from setuptools import setup
+from setuptools import setup, find_packages
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
 
@@ -14,6 +14,7 @@ _ext_headers = glob.glob("{}/include/*".format(_ext_src_root))
 
 setup(
     name='pvn3d',
+	packages=find_packages(inlude=['pvn3d','pvn3d.*']),
     ext_modules=[
         CUDAExtension(
             name='pointnet2_utils._ext',
