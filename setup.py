@@ -4,8 +4,8 @@ import glob
 from setuptools import setup, find_packages
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
-
-_ext_src_root = "./pvn3d/_ext-src"
+working_dir = os.path.abspath(os.getcwd())
+_ext_src_root = working_dir + "/pvn3d/_ext-src"
 _ext_sources = glob.glob("{}/src/*.cpp".format(_ext_src_root)) + glob.glob(
     "{}/src/*.cu".format(_ext_src_root)
 )
