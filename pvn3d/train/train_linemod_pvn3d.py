@@ -18,15 +18,15 @@ import argparse
 import time
 import shutil
 import tqdm
-from lib.utils.etw_pytorch_utils.viz import *
+from pvn3d.lib.utils.etw_pytorch_utils.viz import *
 from lib import PVN3D
 from datasets.linemod.linemod_dataset import LM_Dataset
-from lib.loss import OFLoss, FocalLoss
+from pvn3d.lib.loss import OFLoss, FocalLoss
 from common import Config
-from lib.utils.sync_batchnorm import convert_model
+from pvn3d.lib.utils.sync_batchnorm import convert_model
 from torch.optim.lr_scheduler import CyclicLR
-from lib.utils.pvn3d_eval_utils import TorchEval
-import lib.utils.etw_pytorch_utils as pt_utils
+from pvn3d.lib.utils.pvn3d_eval_utils import TorchEval
+import pvn3d.lib.utils.etw_pytorch_utils as pt_utils
 import resource
 from collections import namedtuple
 import pickle as pkl

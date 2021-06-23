@@ -13,13 +13,13 @@ from common import Config
 from argparse import ArgumentParser
 import sys
 from tqdm import tqdm
-from lib.utils.my_utils import my_utils
+from pvn3d.lib.utils.my_utils import my_utils
 from sklearn.neighbors import NearestNeighbors
 from sklearn.cluster import MeanShift
 import concurrent.futures
 # from cv2 import imshow, waitKey
 
-from lib.utils.icp.icp import my_icp, best_fit_transform
+from pvn3d.lib.utils.icp.icp import my_icp, best_fit_transform
 import numpy as np
 
 

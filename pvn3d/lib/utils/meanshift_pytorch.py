@@ -7,7 +7,7 @@ import pickle as pkl
 import time
 from sklearn.cluster import MeanShift
 from cv2 import imshow, waitKey
-# from lib.utils.my_utils import my_utils
+# from pvn3d.lib.utils.my_utils import my_utils
 
 
 def gaussian_kernel(distance, bandwidth):

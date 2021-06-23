@@ -12,7 +12,7 @@ from ip_basic import depth_map_utils, depth_map_utils_ycb
 from ip_basic import vis_utils
 import sys
 sys.path.append('..')
-from lib.utils.my_utils import my_utils
+from pvn3d.lib.utils.my_utils import my_utils
 from neupeak.utils.webcv2 import imshow, waitKey
 from tqdm import tqdm
 import concurrent.futures

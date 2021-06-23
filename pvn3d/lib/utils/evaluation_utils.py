@@ -4,8 +4,8 @@ import scipy
 import sys
 sys.path.append('.')
 
-from lib.utils.config import cfg
-from lib.utils.data_utils import LineModModelDB, Projector, YCBModelDB
+from pvn3d.lib.utils.config import cfg
+from pvn3d.lib.utils.data_utils import LineModModelDB, Projector, YCBModelDB
 from plyfile import PlyData
 import numpy as np
 import cv2
@@ -14,7 +14,7 @@ import uuid
 import itertools
 from queue import Queue
 
-# from lib.utils.extend_utils.extend_utils import uncertainty_pnp, find_nearest_point_idx, uncertainty_pnp_v2
+# from pvn3d.lib.utils.extend_utils.extend_utils import uncertainty_pnp, find_nearest_point_idx, uncertainty_pnp_v2
 
 def best_fit_transform(A, B):
     '''
