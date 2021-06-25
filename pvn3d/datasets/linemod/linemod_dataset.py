@@ -9,7 +9,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 from common import Config
 import pickle as pkl
-from lib.utils.basic_utils import Basic_Utils
+from pvn3d.lib.utils.basic_utils import Basic_Utils
 import yaml
 import scipy.io as scio
 import scipy.misc

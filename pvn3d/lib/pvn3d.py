@@ -7,10 +7,10 @@ from __future__ import (
 )
 import torch
 import torch.nn as nn
-import lib.utils.etw_pytorch_utils as pt_utils
+importpvn3d.lib.utils.etw_pytorch_utils as pt_utils
 from collections import namedtuple
-from lib.pspnet import PSPNet, Modified_PSPNet
-from lib.pointnet2_utils.pointnet2_modules import PointnetFPModule, PointnetSAModuleMSG
+frompvn3d.lib.pspnet import PSPNet, Modified_PSPNet
+frompvn3d.lib.pointnet2_utils.pointnet2_modules import PointnetFPModule, PointnetSAModuleMSG
 import torch.nn.functional as F
 
 
