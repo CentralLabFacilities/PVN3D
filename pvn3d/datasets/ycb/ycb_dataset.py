@@ -9,7 +9,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 from common import Config
 import pickle as pkl
-frompvn3d.lib.utils.basic_utils import Basic_Utils
+from pvn3d.lib.utils.basic_utils import Basic_Utils
 import scipy.io as scio
 import scipy.misc
 from cv2 import imshow, waitKey
@@ -55,7 +55,7 @@ class YCB_Dataset():
                 print('Finish loading valtestset.')
             else:
                 self.add_noise = False
-                self.path = 'datasets/ycb/dataset_config/test_data_list.txt'
+                self.path = 'datasets/ycb/dataset_config/test_data_list_kurz.txt'
                 self.all_lst = bs_utils.read_lines(self.path)
         print("{}_dataset_size: ".format(dataset_name), len(self.all_lst))
         self.root = config.ycb_root

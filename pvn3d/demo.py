@@ -128,6 +128,7 @@ def cal_view_pred_pose(model, data, epoch=0, obj_id=-1):
             if len(idx) == 0:
                 continue
             pose = pred_pose_lst[idx[0]]
+            print(pose)
             if args.dataset == "ycb":
                 obj_id = int(cls_id[0])
             mesh_pts = bs_utils.get_pointxyz(obj_id, ds_type=args.dataset).copy()

@@ -9,3 +9,5 @@ build
 venv
 Pointnet2_PyTorch
 python-pcl*
+pvn3d/datasets/ycb/YCB_Video_Dataset
+pvn3d/train_log
