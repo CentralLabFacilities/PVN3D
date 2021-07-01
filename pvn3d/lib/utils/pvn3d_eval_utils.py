@@ -10,7 +10,7 @@ from torch.autograd import Variable
 import concurrent.futures
 import numpy as np
 import pickle as pkl
-from common import Config
+from pvn3d.common import Config
 from pvn3d.lib.utils.basic_utils import Basic_Utils
 from pvn3d.lib.utils.meanshift_pytorch import MeanShiftTorch
 

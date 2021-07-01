@@ -1,4 +1,4 @@
-frompvn3d.lib.utils.config import cfg as proj_cfg
+from pvn3d.lib.utils.config import cfg as proj_cfg
 import torch.nn as nn
 import math
 import torch.utils.model_zoo as model_zoo

@@ -5,12 +5,12 @@ import tqdm
 import torch
 import os.path
 import numpy as np
-from common import Config
+from pvn3d.common import Config
 import pickle as pkl
 from pvn3d.lib.utils.basic_utils import Basic_Utils
 import scipy.io as scio
 import scipy.misc
-from datasets.ycb.ycb_dataset import YCB_Dataset
+from pvn3d.datasets.ycb.ycb_dataset import YCB_Dataset
 
 config = Config(dataset_name='ycb')
 bs_utils = Basic_Utils(config)

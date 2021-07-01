@@ -9,7 +9,7 @@ import numpy as np
 import pickle as pkl
 from PIL import Image
 from queue import Queue
-from common import Config
+from pvn3d.common import Config
 from argparse import ArgumentParser
 import sys
 from tqdm import tqdm

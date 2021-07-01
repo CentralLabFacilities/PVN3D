@@ -19,10 +19,10 @@ import time
 import shutil
 import tqdm
 from pvn3d.lib.utils.etw_pytorch_utils.viz import *
-from lib import PVN3D
-from datasets.linemod.linemod_dataset import LM_Dataset
+from pvn3d.lib import PVN3D
+from pvn3d.datasets.linemod.linemod_dataset import LM_Dataset
 from pvn3d.lib.loss import OFLoss, FocalLoss
-from common import Config
+from pvn3d.common import Config
 from pvn3d.lib.utils.sync_batchnorm import convert_model
 from torch.optim.lr_scheduler import CyclicLR
 from pvn3d.lib.utils.pvn3d_eval_utils import TorchEval
