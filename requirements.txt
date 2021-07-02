@@ -9,7 +9,7 @@ scipy==1.2.1
 six==1.16.0
 sklearn==0.0
 torch==1.5.1
-torchvision==0.6.0
+torchvision==0.6.1
 tqdm==4.60.0
 opencv-python==4.1.2.30
 opencv-contrib-python==4.4.0.42
