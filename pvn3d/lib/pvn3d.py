@@ -7,7 +7,7 @@ from __future__ import (
 )
 import torch
 import torch.nn as nn
-import pvn3d.lib.utils.etw_pytorch_utils as pt_utils
+from pvn3d.lib.utils import etw_pytorch_utils as pt_utils
 from collections import namedtuple
 from pvn3d.lib.pspnet import PSPNet, Modified_PSPNet
 from pvn3d.lib.pointnet2_utils.pointnet2_modules import PointnetFPModule, PointnetSAModuleMSG

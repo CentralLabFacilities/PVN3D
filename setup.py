@@ -14,7 +14,7 @@ _ext_headers = glob.glob("{}/include/*".format(_ext_src_root))
 
 setup(
     name='pvn3d',
-	packages=find_packages(include=['pvn3d','pvn3d.*']),
+	packages=find_packages(),
     ext_modules=[
         CUDAExtension(
             name='pointnet2_utils._ext',
