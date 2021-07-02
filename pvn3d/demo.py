@@ -15,7 +15,7 @@ import torch.nn as nn
 import numpy as np
 import pickle as pkl
 from pvn3d.common import Config
-from pvn3d.lib.import PVN3D
+from pvn3d.lib import PVN3D
 from pvn3d.datasets.ycb.ycb_dataset import YCB_Dataset
 from pvn3d.datasets.linemod.linemod_dataset import LM_Dataset
 from pvn3d.lib.utils.sync_batchnorm import convert_model
@@ -177,9 +177,7 @@ def main():
         )
     model = nn.DataParallel(model)
 
-    for i, data in tqdm.tqdm(
-        enumerate(test_loader), leave=False, desc="val"
-    ):
+    for i, data in tqdm.tqdm(enumerate(test_loader), leave=False, desc="val"):
         cal_view_pred_pose(model, data, epoch=i, obj_id=obj_id)
 
 
