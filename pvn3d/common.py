@@ -12,7 +12,8 @@ def ensure_fd(fd):
 class Config:
     def __init__(self, dataset_name='ycb', cls_type=''):
         self.dataset_name = dataset_name
-        self.exp_dir = os.path.dirname(__file__)
+        self.exp_dir = os.environ.get('PVN3D_DATASETS_FOLDER')
+        print(self.exp_dir)
         self.exp_name = os.path.basename(self.exp_dir)
         self.resnet_ptr_mdl_p = os.path.abspath(
             os.path.join(

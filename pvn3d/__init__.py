@@ -15,5 +15,5 @@ except NameError:
 
 if not __PVN3D_SETUP__:
     from pvn3d.lib import pointnet2_utils
-    from pvn3d import data
-    from pvn3d import models
+#    from pvn3d import data
+#    from pvn3d import models

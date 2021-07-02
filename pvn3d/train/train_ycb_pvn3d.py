@@ -27,7 +27,7 @@ from pvn3d.common import Config
 from pvn3d.lib.utils.sync_batchnorm import convert_model
 from torch.optim.lr_scheduler import CyclicLR
 from pvn3d.lib.utils.pvn3d_eval_utils import TorchEval
-import pvn3d.lib.utils.etw_pytorch_utils as pt_utils
+from pvn3d.lib.utils import etw_pytorch_utils as pt_utils
 import resource
 from collections import namedtuple
 

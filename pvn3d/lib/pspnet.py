@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
-import pvn3d.lib.extractors as extractors
+from pvn3d.lib import extractors as extractors
 
 
 class PSPModule(nn.Module):

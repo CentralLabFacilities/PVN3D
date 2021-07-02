@@ -8,15 +8,20 @@ from __future__ import (
 import torch
 from torch.autograd import Function
 import torch.nn as nn
-import pvn3d.lib.utils.etw_pytorch_utils as pt_utils
+from pvn3d.lib.utils import etw_pytorch_utils as pt_utils
 import sys
 
 try:
     import builtins
 except:
     import __builtin__ as builtins
-
-from pvn3d.lib.pointnet2_utils import _ext
+try:
+    from pvn3d.lib.pointnet2_utils import _ext
+except ImportError:
+    from torch.utils.cpp_extension import load
+    import glob
+    import os.path as osp
+    import os
 
 if False:
     # Workaround for type hints without depending on the `typing` module

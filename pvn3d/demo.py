@@ -17,7 +17,7 @@ import pickle as pkl
 from pvn3d.common import Config
 from pvn3d.lib import PVN3D
 from pvn3d.datasets.ycb.ycb_dataset import YCB_Dataset
-from pvn3d.datasets.linemod.linemod_dataset import LM_Dataset
+# from pvn3d.datasets.linemod.linemod_dataset import LM_Dataset
 from pvn3d.lib.utils.sync_batchnorm import convert_model
 from pvn3d.lib.utils.pvn3d_eval_utils import cal_frame_poses, cal_frame_poses_lm
 from pvn3d.lib.utils.basic_utils import Basic_Utils
