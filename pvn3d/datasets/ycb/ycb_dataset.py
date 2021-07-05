@@ -36,7 +36,7 @@ class YCB_Dataset():
         self.rng = np.random
         if dataset_name == 'train':
             self.add_noise = True
-            self.path = 'datasets/ycb/dataset_config/train_data_list.txt'
+            self.path = os.environ.get('PVN3D_DATASETS_FOLDER') + '/datasets/ycb/dataset_config/train_data_list.txt'
             self.all_lst = bs_utils.read_lines(self.path)
             self.real_lst = []
             self.syn_lst = []
@@ -55,7 +55,7 @@ class YCB_Dataset():
                 print('Finish loading valtestset.')
             else:
                 self.add_noise = False
-                self.path = 'datasets/ycb/dataset_config/test_data_list.txt'
+                self.path = os.environ.get('PVN3D_DATASETS_FOLDER') + '/datasets/ycb/dataset_config/test_data_list.txt'
                 self.all_lst = bs_utils.read_lines(self.path)
         print("{}_dataset_size: ".format(dataset_name), len(self.all_lst))
         self.root = config.ycb_root
