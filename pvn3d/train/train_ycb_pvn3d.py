@@ -420,7 +420,7 @@ if __name__ == "__main__":
 
         #############################################################
         while not os.path.exists(config.preprocessed_testset_pth):
-            print("wait for preprocess dataset.")
+            print("wait for preprocess dataset.", config.preprocessed_testset_pth)
             import time
             time.sleep(10)
         #############################################################
