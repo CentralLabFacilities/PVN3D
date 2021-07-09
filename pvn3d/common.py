@@ -74,7 +74,7 @@ class Config:
             self.preprocessed_testset_pth = os.path.abspath(
                 os.path.join(
                     self.exp_dir,
-                    'datasets/ycb/YCB_Video_Dataset/preprocessed_valtestset.pkl'
+                    'datasets/ycb/preprocessed/preprocessed_valtestset.pkl'
                 )
             )
             self.use_preprocess = True
