@@ -37,7 +37,7 @@ def main():
             if len(i_data) < 11:
                 print(len(i_data))
             data_lst.append(i_data)
-	print("Saving to", config.preprocessed_testset_pth)
+    print("Saving to", config.preprocessed_testset_pth)
     pkl.dump(data_lst, open(config.preprocessed_testset_pth, 'wb'))
 
 
