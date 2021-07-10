@@ -25,7 +25,7 @@ def main():
     test_ds = YCB_Dataset('test')
     test_loader = torch.utils.data.DataLoader(
         test_ds, batch_size=config.test_mini_batch_size, shuffle=False,
-        num_workers=40, worker_init_fn=worker_init_fn
+        num_workers=5, worker_init_fn=worker_init_fn
     )
     data_lst = []
     for i, data in tqdm.tqdm(
