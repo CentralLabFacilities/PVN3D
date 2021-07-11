@@ -38,7 +38,9 @@ def main():
                 print(len(i_data))
             data_lst.append(i_data)
     print("Saving to", config.preprocessed_testset_pth)
-    pkl.dump(data_lst, open(config.preprocessed_testset_pth, 'wb'))
+    saveFile = open(config.preprocessed_testset_pth, 'wb')
+    pkl.dump(data_lst, saveFile)
+    saveFile.close()
 
 
 if __name__ == "__main__":
