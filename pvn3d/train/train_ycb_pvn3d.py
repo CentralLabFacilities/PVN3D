@@ -427,18 +427,18 @@ if __name__ == "__main__":
 
         train_loader = torch.utils.data.DataLoader(
             train_ds, batch_size=config.mini_batch_size, shuffle=True,
-            num_workers=60, worker_init_fn=worker_init_fn
+            num_workers=0, worker_init_fn=worker_init_fn
         )
         val_ds = YCB_Dataset('val')
         val_loader = torch.utils.data.DataLoader(
             val_ds, batch_size=config.val_mini_batch_size, shuffle=False,
-            num_workers=10
+            num_workers=0
         )
     else:
         test_ds = YCB_Dataset('test')
         test_loader = torch.utils.data.DataLoader(
             test_ds, batch_size=config.test_mini_batch_size, shuffle=False,
-            num_workers=20
+            num_workers=0
         )
 
     model = PVN3D(
