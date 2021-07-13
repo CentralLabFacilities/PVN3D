@@ -29,7 +29,6 @@ def main():
         num_workers=0, worker_init_fn=worker_init_fn
     )
     data_lst = []
-    backup = np.asarray([])
     for i, data in tqdm.tqdm(
         enumerate(test_loader), leave=False, desc='Preprocessing valtestset'
     ):
@@ -39,10 +38,7 @@ def main():
             if len(i_data) < 11:
                 print(len(i_data))
             data_lst.append(i_data)
-            backup = np.append(backup,i_data)
     print("Saving to", config.preprocessed_testset_pth)
-    np.save("/home/bv-user/pvn3d/datasets/ycb/preprocessed/backup.npy",backup,allow_pickle=False)
-    np.save("/home/bv-user/pvn3d/datasets/ycb/preprocessed/backupPickle.npy",backup,allow_pickle=True)
     saveFile = open(config.preprocessed_testset_pth, 'wb')
     saveFile.write(pkl.dump(data_lst))
     saveFile.close()
