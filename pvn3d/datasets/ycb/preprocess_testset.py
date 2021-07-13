@@ -36,14 +36,11 @@ def main():
             i_data = [item[ibs] for item in data]
             if len(i_data) < 11:
                 print(len(i_data))
-            print(i_data)
             data_lst.append(i_data)
     print("Saving to", config.preprocessed_testset_pth)
     saveFile = open(config.preprocessed_testset_pth, 'wb')
-    print(data_lst)
-    pkl.dump(data_lst, saveFile)
+    saveFile.write(pkl.dump(data_lst))
     saveFile.close()
-
 
 if __name__ == "__main__":
     main()
