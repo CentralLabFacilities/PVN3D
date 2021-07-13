@@ -40,7 +40,7 @@ def main():
             data_lst.append(i_data)
     print("Saving to", config.preprocessed_testset_pth)
     saveFile = open(config.preprocessed_testset_pth, 'wb')
-    saveFile.write(pkl.dump(data_lst))
+    pkl.dump(data_lst,saveFile)
     saveFile.close()
 
 if __name__ == "__main__":
