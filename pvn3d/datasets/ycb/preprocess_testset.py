@@ -19,6 +19,7 @@ torch.multiprocessing.set_sharing_strategy('file_system')
 def worker_init_fn(worker_id):
     np.random.seed(np.random.get_state()[1][0] + worker_id)
 
+
 def main():
     if os.path.exists(config.preprocessed_testset_pth):
         return
@@ -28,6 +29,7 @@ def main():
         num_workers=0, worker_init_fn=worker_init_fn
     )
     data_lst = []
+    backup = np.asarray([])
     for i, data in tqdm.tqdm(
         enumerate(test_loader), leave=False, desc='Preprocessing valtestset'
     ):
@@ -37,7 +39,10 @@ def main():
             if len(i_data) < 11:
                 print(len(i_data))
             data_lst.append(i_data)
+			backup.append(i_data)
     print("Saving to", config.preprocessed_testset_pth)
+	np.save("/home/bv-user/pvn3d/datasets/ycb/preprocessed/backup.npy",backup,allow_pickle=False)
+	np.save("/home/bv-user/pvn3d/datasets/ycb/preprocessed/backupPickle.npy",backup,allow_pickle=True)
     saveFile = open(config.preprocessed_testset_pth, 'wb')
     saveFile.write(pkl.dump(data_lst))
     saveFile.close()
