@@ -40,7 +40,8 @@ def main():
             data_lst.append(i_data)
     print("Saving to", config.preprocessed_testset_pth)
     saveFile = open(config.preprocessed_testset_pth, 'wb')
-    pkl.dump(data_lst,saveFile)
+    torch.save(data_lst,saveFile)
+    torch.save(data_lst,'Backup.pt')
     saveFile.close()
 
 if __name__ == "__main__":
