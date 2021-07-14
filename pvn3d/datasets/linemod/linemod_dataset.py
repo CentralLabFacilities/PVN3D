@@ -70,7 +70,7 @@ class LM_Dataset():
             if os.path.exists(self.config.preprocessed_testset_pth) and self.config.use_preprocess:
                 print('Loading valtestset.')
                 with open(self.config.preprocessed_testset_pth, 'rb') as f:
-                    self.pp_data = pkl.load(f)
+                    self.pp_data = torch.load(f)
                 self.all_lst = [i for i in range(len(self.pp_data))]
                 print('Finish loading valtestset.')
             else:
