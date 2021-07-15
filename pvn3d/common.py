@@ -35,9 +35,9 @@ class Config:
         ensure_fd(self.log_eval_dir)
 
         self.n_total_epoch = 25
-        self.mini_batch_size = 24
+        self.mini_batch_size = int(os.environ.get('PVN3D_MINI_BATCH_SIZE','24'))
         self.num_mini_batch_per_epoch = 4000
-        self.val_mini_batch_size = 24
+        self.val_mini_batch_size = int(os.environ.get('PVN3D_MINI_BATCH_SIZE','24'))
         self.val_num_mini_batch_per_epoch = 125
         self.test_mini_batch_size = 1
 
